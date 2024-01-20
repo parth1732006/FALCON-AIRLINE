@@ -1,0 +1,23 @@
+<?php
+if(isset($_POST['add']))
+{
+  $conn=mysqli_connect("localhost","root","","flight");
+  if($conn)
+  {
+    $flycode=$_POST['flycode'];
+    $dtime=$_POST['dtime'];
+    $ddate=$_POST['ddate'];
+    $from=$_POST['source'];
+    $to=$_POST['destination'];
+    $bclass=$_POST['bclass'];
+    $eclass=$_POST['eclass'];
+    $pclass=$_POST['pclass'];
+    $insert="INSERT INTO schedule values ('$flycode','$dtime','$ddate','$from','$to','$bclass','$eclass','$pclass')";
+    if(mysqli_query($conn,$insert))
+    {
+      header('location:addfly.php');
+    }
+    mysqli_close($conn);
+  }
+}
+?>

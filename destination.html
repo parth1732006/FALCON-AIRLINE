@@ -1,0 +1,42 @@
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight Destination Selection</title>
+</head>
+<body>
+  <label for="origin">From:</label>
+  <input type="text" id="origin" name="origin" placeholder="Enter origin airport code">
+
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date">
+
+  <button onclick="getFlightDestination()">Get Destination</button>
+
+  <div id="destination"></div>
+
+  <script>
+    function getFlightDestination() {
+      var origin = document.getElementById("origin").value;
+      var date = document.getElementById("date").value;
+      var destinationElement = document.getElementById("destination");
+
+      // Make an API request to retrieve flight destination
+      // You can use AJAX or fetch API to perform the request
+
+      // Example using fetch API
+      var url = "https://api.flightdata.com/flights?origin=" + origin + "&date=" + date + "&apikey=YOUR_API_KEY";
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          var destination = data.destination;
+          destinationElement.textContent = "Flight destination: " + destination;
+        })
+        .catch(error => {
+          destinationElement.textContent = "Failed to retrieve flight destination.";
+          console.log("Error occurred:", error);
+        });
+    }
+  </script>
+</body>

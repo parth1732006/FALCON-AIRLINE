@@ -1,0 +1,114 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-image: url('flight.jpg'); 
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 100px;
+}  
+
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: White;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.searchbtn {  
+  background-color: rgb(229, 224, 223);  
+  color: rgb(232, 24, 24);  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: 10;  
+  cursor: pointer;  
+  width: 9%;  
+  opacity: 0.9;  
+}  
+.searchbtn:hover {  
+  opacity: 1; 
+  background-color:black ; 
+  color: white;
+}  
+</style>  
+</head>  
+<body>  
+<form action="submit.php" method="post">  
+  <div class="container">  
+  
+  <hr>  
+  <label><b> From: </b></label>   
+<input type="text" name="from" placeholder= "from" size="20" required />   
+<label><b> To: </b></label>   
+<input type="text" name="to" placeholder="to" size="20" required />   
+<label><b> Departure: </b></label>    
+<input type="date" name="departure" placeholder="departure" size="15"required /><br><br>
+<label><b>Select Time:</b></label>
+<input type="time" name="time" placeholder="time" size="15"required />   
+<div>  
+<label><b>   
+Travel Class:
+</b>  
+</label>   
+  
+<select>  
+<option value="-Select-">-Select-</option>  
+<option value="Business class">Business class</option>  
+<option value="Economy class">Economy class</option>
+<option value="Premium class">Premium class</option>  
+</select>  
+</div>  
+    <div>  
+        <label><b>  
+        Select A Fare Type:
+      </b>
+        </label>   
+          
+        <select>  
+        <option value="-Select-">-Select-</option>  
+        <option value="Armed Forces Fares">Armed Forces Fares</option>  
+        <option value="Students Fares">Students Fares</option>
+        <option value="Senior Citizens Fares">Senior Citizens Fares</option>
+        <option value="Doctor & Nurses Fares">Doctor & Nurses Fares</option>
+        <option value="Double Seat Fares">Double Seat Fares</option>  
+        </select>  
+        </div>  
+<div>   
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
+<input type="text" name="phone" placeholder="phone no." value="+91" size="10"/ required>   
+Current Address :  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  
+ <label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" required>  
+  
+ 
+<a href="submit.php"><button type="Search" class="searchbtn">Next</button></a>
+     
+   
+</form>  
+
+
+</body>  
+</html>

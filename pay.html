@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Booking Payment Form</title>
+  <style>
+    form {
+  width: 500px;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input {
+  width: 200px;
+  padding: 10px;
+}
+input[type="submit"] {
+  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+}
+  </style>
+</head>
+<body>
+  <form action="payment.php" method="post">
+    <div>
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" name="cardNumber" placeholder="1234-5678-9012-3456">
+    </div>
+    <div>
+      <label for="cardExpiry">Card Expiry</label>
+      <input type="month" id="cardExpiry" name="cardExpiry">
+    </div>
+    <div>
+      <label for="cardCVV">Card CVV</label>
+      <input type="text" id="cardCVV" name="cardCVV" placeholder="123">
+    </div>
+    <div>
+      <input type="submit" value="Pay">
+    </div>
+  </form>
+</body>
+</html>

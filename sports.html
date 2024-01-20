@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Academy</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Create a separate CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to XYZ Sports Academy</h1>
+        <!-- Add navigation links to other pages if necessary -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Discover the Champion Within You!</h2>
+            <p>Welcome to XYZ Sports Academy, where we help athletes of all ages and skill levels to reach their full potential. Our state-of-the-art facilities and experienced coaches will guide you on your journey to greatness.</p>
+            <a href="#contact" class="cta-button">Enroll Now</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About XYZ Sports Academy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae fermentum lorem. Sed feugiat felis a risus tempus, et fermentum velit ullamcorper. Etiam sit amet felis at augue elementum auctor.</p>
+            <p>Suspendisse potenti. Quisque bibendum, massa non tincidunt convallis, nisi lorem euismod turpis, ac auctor mi arcu eu massa.</p>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs">
+            <h2>Our Programs</h2>
+            <p>Choose from a variety of programs designed to cater to different interests and skill levels:</p>
+            <ul>
+                <li>Junior Athlete Development</li>
+                <li>Advanced Training for Professionals</li>
+                <li>Recreational Sports for All Ages</li>
+                <li>Specialized Workshops and Camps</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to enroll in our programs, feel free to get in touch:</p>
+            <form action="/contact-form-handler" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 XYZ Sports Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
